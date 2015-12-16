@@ -1,0 +1,50 @@
+
+    <div class="main">
+        <link rel="stylesheet" href="js/mobilemodules/detailmobile/detail.css"/>
+        <div class="head">
+            <img class="smalllogo" ng-click="backtohome()" src="js/mobilemodules/detailmobile/img/headleft.png" alt=""/>
+            <span>商品详情</span>
+            <img class="message" src="js/mobilemodules/detailmobile/img/headright.png" alt=""/>
+        </div>
+        <div class="goodsimg"><img ng-src="images/showimg/{{product.p_showimg}}.jpg" alt=""/></div>
+        <div class="textdetail">
+            <h3>{{product.p_name}}</h3>
+            <div>原&nbsp;&nbsp;&nbsp;&nbsp;价:&nbsp;&nbsp;<span style="text-decoration: line-through">15.80/1l/盒</span></div>
+            <div>优&nbsp;惠&nbsp;价:&nbsp;&nbsp;<span><em style="color:#ff6b00 ">￥{{product.p_price}} &nbsp;</em>/{{product.p_pricedetail}}</span></div>
+            <div>预定时间:&nbsp;&nbsp;<span>2015.11.11-2015.12.12</span></div>
+            <div>产品规格:&nbsp;&nbsp;<span>{{product.p_pricedetail}}</span></div>
+            <div>配送时间:&nbsp;&nbsp;<span>天天配送</span></div>
+            <div>数&nbsp;&nbsp;&nbsp;&nbsp;量:&nbsp;&nbsp;
+                <input type="button" ng-click="delcount()" value="-"/><input ng-model="prdcount" type="text"/><input type="button" ng-click="addcount()" value="+"/></div>
+            <div>配送范围:&nbsp;&nbsp;<span>全成都</span></div>
+            <div>配送费用:&nbsp;&nbsp;<span>满38免费</span></div>
+        </div>
+        <div class="store">
+            <img src="js/mobilemodules/detailmobile/img/201412271420509383.jpg" alt=""/>
+            <span>商铺名称:&nbsp;&nbsp;<span>{{product.p_store}}</span></span><br/>
+            <span>商铺星级:&nbsp;&nbsp;<span>☆☆☆☆☆</span></span>
+        </div>
+        <div class="tostore">进入店铺</div>
+        <table class="evaluate">
+            <tr>
+                <td ng-class="detailchoosed" ng-click="detailclick()">商品描述</td>
+                <td ng-class="messagechoosed" ng-click="messageclick()">商铺评价</td>
+                <td>店铺推荐</td>
+            </tr></table>
+        <div class="prddetail"  ng-hide="isdetail">
+            <img ng-src="{{detail}}" alt="" ng-repeat="detail in detailimgs" />
+        </div>
+        <div class="prdmessage" ng-show="isdetail">
+            <div class="messagediv" ng-repeat="message in messages">
+                <p>{{message.message_content}}</p>
+                <p>评论时间:{{message.message_data}}</p>
+                <p>品&nbsp;论&nbsp;者:{{message.message_user}}</p>
+            </div>
+            <div>
+                <textarea ng-model="messagecontent" placeholder="请输入你对此商品的评价!" name="" id="" cols="100" style="width: 100%" rows="5"></textarea><br/>
+                您的名字:<input ng-model="messagenick" placeholder="匿名" type="text" /><br/>
+                <input type="button" ng-click="addMessage()" value="评论"/>
+            </div>
+        </div>
+    <div class="footer"><input class="ccgleft" type="button" ng-click="addtocart()" value="加入购物车"/><input class="ccgright" type="button" ng-click="tocartpage()" value="去结算"/></div>
+    </div>

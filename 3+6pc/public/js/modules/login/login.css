@@ -1,0 +1,145 @@
+/*++++++头部++++++++*/
+.head{
+    margin: auto;
+    font-size: 12px;
+    width: 1228px;
+}
+.head .headnav a{
+    margin-right: 20px;
+}
+.head .notice{
+    display: inline-block;
+    margin: 0 100px;
+}
+.head .notice img{
+    vertical-align: middle;
+}
+.head .headlogo{
+    color: #757575;
+    padding: 24px 0 56px 0;
+    font-size: 30px;
+    font-weight: 900;
+}
+.head .headlogo img{
+    vertical-align: middle;
+    margin-right: 30px;
+}
+/*============主界面==========*/
+.main{
+    color: #757575;
+    font-size: 12px;
+    padding: 55px 0;
+    width: 1226px;
+    border: 1px solid #d9d9d9;
+    margin: auto;
+}
+.sonofmain{
+    width: 725px;
+    margin-bottom: 15px;
+    height: 35px;
+}
+.main_left{
+    color: #d42230;
+    line-height: 35px;
+    width: 112px;
+    height: 100%;
+    text-align: right;
+    float: left;
+}
+.main_right{
+    width: 260px;
+    line-height: 35px;
+    height: 100%;
+    border: 1px solid #fe9901;
+    float: left;
+    margin-left: 30px;
+}
+.main_right img{
+    margin: 8px 8px 0 0;
+    float: right;
+}
+.main_right input{
+    border: none;
+    outline: none;
+    padding-left: 10px;
+    vertical-align: middle;
+}
+#getmessage{
+    cursor: pointer;
+    margin-left: 30px;
+    width: 124px;
+    height: 35px;
+    outline: none;
+    border: 1px solid #cccccc;
+    border-radius: 3px;
+}
+
+.main_right table td{padding: 0 5px;text-align: center}
+.main_right table td div{
+    background-color: #d6d3d3;
+    width: 62px;
+    height: 4px;
+}
+.deal{
+    text-align: center;
+}
+#loginbtn{
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    border-radius: 3px;
+    border: 1px solid #f38313;
+    color: #ffffff;
+    font-weight: 900;
+    background-color: #fe9901;
+}
+#loginbtn:hover{
+    opacity: 0.8;
+}
+.main .partner{
+    width:303px;
+}
+.main .partner img{
+    float: left;
+
+}
+.border{
+    width: 730px;
+    border-right: 1px dashed #d9d9d9;
+}
+/*++++++++++++++++++底部=============*/
+.footertable{
+    margin: auto;
+}
+.footertable a{
+    color: #4b4846;
+}
+.footertable td{
+    padding-right: 90px;
+    vertical-align: top;
+}
+.footerdiv{
+    min-width: 1228px;
+    color: #4f456e;
+    width: 100%;
+    border-top: 2px solid #c30d23;
+}
+.code{
+
+    overflow: hidden;
+    width: 330px;
+    margin: 55px auto 30px auto;
+}
+.code div img{
+    width: 76px;
+    height: 76px;
+}
+.code div{
+    text-align: center;
+}
+.chaining a{
+    color: #4f456e;
+}
+.chaining{
+    text-align: center;
+}

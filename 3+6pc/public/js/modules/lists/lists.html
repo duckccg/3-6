@@ -1,0 +1,87 @@
+
+    <div class="main">
+        <link rel="stylesheet" href="js/modules/lists/lists.css"/>
+        <div class="position">
+            当前位置 : <a href="">首页</a>&nbsp;>&nbsp;<a href="">搜索结果</a>&nbsp;>&nbsp;<a href="">{{listsearch}}</a>
+        </div>
+        <div class="recommendout">
+        <div class="recommend">
+            <div class="top">推荐商品</div>
+            <ul class="hot" >
+                <li ng-repeat="recom in recoms" ng-click="todetailpage(recom.p_id)">
+                    <img ng-src="{{recom.p_showimg}}"  alt=""/>
+                    <div><a href="">{{recom.p_name}}</a><br/>
+                        <span><label for="">￥{{recom.p_price}}</label>&nbsp;&nbsp;/{{recom.p_pricedetail}}</span></div>
+                </li>
+            </ul>
+            <ul></ul>
+        </div>
+        <div class="recommend">
+            <div class="top">最近浏览</div>
+            <ul>
+                <li>暂无浏览记录</li>
+            </ul>
+        </div>
+        </div>
+        <div class="result">
+            <div class="resulttop"><label for="">{{listsearch}}</label> <span>商品筛选(共30个商品)</span></div>
+            <div class="resultdetail"><div class="tip">已选条件:</div>
+                <select name="" id="">
+                    <option value="">成都</option></select></div>
+            <div class="resultdetail"><div class="tip">类别:</div>
+                <input type="button" value="全部"/>
+                <input type="button" value="肉禽蛋白"/>
+                <input type="button" value="水果蔬菜"/>
+                <input type="button" value="海鲜水产"/>
+                <input type="button" value="香香嘴儿"/>
+                <input type="button" value="综合类"/>
+                <input type="button" value="净菜"/>
+            </div>
+            <div class="resultdetail"><div class="tip">配送时间:</div>
+                <input type="button" value="全部"/>
+                <input type="button" value="天天配送"/>
+                <input type="button" value="周一"/>
+                <input type="button" value="周二"/>
+                <input type="button" value="周三"/>
+                <input type="button" value="周四"/>
+                <input type="button" value="周五"/>
+                <input type="button" value="周六"/>
+                <input type="button" value="周日"/>
+            </div>
+            <div class="resultdetail"><div class="tip">价格:</div>
+                <input type="button" value="全部"/>
+                <input type="button" value="0-10"/>
+                <input type="button" value="10-30"/>
+                <input type="button" value="30-60"/>
+                <input type="button" value="60以上"/>
+                <input type="text" value=""/> -
+                <input type="text" value=""/>
+                <input type="button" value="确定"/>
+            </div>
+            <div class="sort">
+                <label for="">排序:</label>
+                <input type="button" value="综合排序"/> |
+                <input type="button" value="销量↓"/> |
+                <input type="button" value="价格↓"/>
+            </div>
+            <div class="searchgoods">
+                <div class="goods" ng-repeat="list in lists">
+                    <img ng-src="{{list.p_showimg}}" ng-click="todetailpage(list.p_id)" alt=""/>
+                    <label for=""><a href="">{{list.p_name}}</a></label><br/>
+                    <span><label for="">￥{{list.p_price}}</label>/{{list.p_pricedetail}}</span><br/>
+                    <a href="">{{list.p_store}}</a><br/>
+                    <span>售出<label for="">188</label>件</span><br/>
+                    <input type="button" value="❤关注商品"/>
+                    <input type="button" ng-click="addtocart(list_p_id)" value="＋加入购物车"/>
+                </div>
+
+            </div>
+            <div class="pages">
+                <div class="page">首页</div>
+                <div class="page">上一页</div>
+                <div class="allpage page"><div class="page">1</div></div>
+                <div class="page">下一页</div>
+                <div class="page">尾页</div>
+            </div>
+        </div>
+    </div>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html ng-app="mainApp">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="../../../css/all.css"/>
+    <link rel="stylesheet" href="login.css"/>
+    <!--<script src="../../angular_modules/angular.min.js"></script>-->
+    <!--<script src="../../angular_modules/angular-route.min.js"></script>-->
+</head>
+<body>
+<!--登录头部-->
+<div class="head">
+    <!--顶部导航-->
+    <div class="headnav">
+        <a href="">收藏本站</a>
+        <a href="">下载App</a>
+        <a class="ccgatored" href="">售前服务</a>
+        <a class="ccgatored" href="">售后服务</a>
+        <div class="notice"><img src="img/adv_icon.png" alt=""/><a href="">[新品]美味鸡腿!点击查看!</a></div>
+        <a class="ccgatored cggright" style="margin-right: 0" href="../reg/reg.html">注册</a>
+        <a class="ccgatored cggright"  href="">登录</a>
+    </div>
+    <!--logo-->
+    <div class="headlogo"><img src="img/logo.png" alt=""/>&nbsp;|&nbsp;欢迎登录</div>
+</div>
+
+<!--登录主界面-->
+<div class="main">
+    <div class="border">
+    <div class="telenum sonofmain">
+        <div class="main_left">用户名</div>
+        <div class="main_right"><input type="text" id="username"/><img
+                src="img/3+6_03.png" alt=""/></div></div>
+    <div class="telenum sonofmain">
+        <div class="main_left">密码</div>
+        <div class="main_right"><input type="password" id="pwd"/><img
+                src="img/3+6_06.png" alt=""/></div></div>
+    <div class="telenum sonofmain">
+        <div class="main_left">验证码</div>
+        <div class="main_right" style="width: 85px"><input type="text" id="code"  style="width:80%" /></div><canvas width="80" height="35" id="cs"></canvas><a href="javascript:drawCode()">看不清?换一张</a></div>
+    <div class="telenum sonofmain" >
+        <div class="main_left"></div>
+        <div class="main_right" style="border: none"><input type="checkbox"/><span style="margin-right: 100px">自动登录</span> <a href="">忘记密码?</a>
+        </div></div>
+    <br/>
+    <div class="telenum sonofmain">
+        <div class="main_left"></div>
+        <div class="main_right" style="border: none"><input type="button" value="登录" id="loginbtn"/>
+        </div></div>
+    <br/>
+    <div class="telenum sonofmain" >
+        <div class="main_left"></div>
+        <div class="main_right" style="border: none">
+            &nbsp;&nbsp;还没有账号?&nbsp;<a href="../reg/reg.html">免费注册</a>
+        </div></div>
+    <div class="telenum sonofmain" >
+        <div class="main_left"></div>
+        <div class="main_right " style="border: none">
+            使用合作网站账号登录3+6智惠家
+        </div></div>
+    <div class="telenum sonofmain">
+        <div class="main_left"></div>
+        <div class="main_right partner" style="border: none">
+            <a href=""><img src="img/Connect_logo_7.png" alt=""/></a>
+                        <a href=""><img src="img/loginButton_24.png" alt=""/></a>
+                        <a href=""><img src="img/zfb.jpg" alt=""/></a>
+        </div></div>
+    </div>
+
+
+</div>
+
+
+<!--登录底部-->
+<table class="footertable">
+    <tr>
+        <td><img src="img/3+6_09.png" alt=""/><br/>
+            <a href="">购物流程</a>
+            <a href="">订购方式</a><br/>
+            <a href="">取货指南</a>
+        </td>
+        <td><img src="img/3+6_11.png" alt=""/><br/>
+            <a href="">充值说明</a>
+            <a href="">订单详情</a><br/>
+        </td>
+        <td><img src="img/3+6_13.png" alt=""/><br/>
+            <a href="">申请安装</a>
+        </td>
+        <td style="padding-right: 0"><img src="img/3+6_15.png" alt=""/><br/>
+            <a href="">疑难解答</a>
+        </td>
+    </tr>
+</table>
+<div class="footerdiv">
+    <div class="code">
+        <div class="wexin cggleft"><img src="img/weixin-code.png" alt=""/><br/>微信商城</div>
+        <div class="app cggright"><img src="img/app-code.png" alt=""/><br/>手机客服端APP</div>
+    </div>
+    <div class="chaining">
+        <a href="">企业官网</a>&nbsp;|&nbsp;
+        <a href="">关于我们</a>&nbsp;|&nbsp;
+        <a href="">联系我们</a>&nbsp;|&nbsp;
+        <a href="">快速注册</a>&nbsp;|&nbsp;
+        <a href="">卖家中心</a>&nbsp;|&nbsp;
+        <a href="">百度统计</a><br/>
+        <p>2010-2015 3+6智惠家生鲜网上商城 版权所有，并保留所有权利。 蜀ICP备12015297号 经营性-川B2-20140216</p>
+        <br/>
+        <br/>
+        友情链接&nbsp;:&nbsp;<a href="" style="font-size: 18px">快递查询</a>
+        <br/>
+        <br/>
+        <br/>
+    </div>
+</div>
+</body>
+<script src="../../angular_modules/jquery-1.11.3.min.js"></script>
+<script src="login.js"></script>
+</html>

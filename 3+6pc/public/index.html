@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html ng-app="mainApp">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="css/all.css"/>
+    <link rel="stylesheet" href="css/index.css"/>
+    <script src="js/angular_modules/angular.min.js"></script>
+    <script src="js/angular_modules/angular-route.min.js"></script>
+    <script src="js/angular_modules/main.js"></script>
+    <script src="js/modules/home/home.js"></script>
+    <script src="js/modules/lists/lists.js"></script>
+    <script src="js/modules/cart/cart.js"></script>
+    <script src="js/modules/details/details.js"></script>
+    <script src="js/angular_modules/jquery-1.11.3.min.js"></script>
+</head>
+<body ng-controller="index">
+<!--登录头部-->
+<div class="head">
+    <!--顶部导航-->
+    <div class="headnav">
+        <a href="">收藏本站</a>
+        <a href="">下载App</a>
+        <a class="ccgatored" href="">售前服务</a>
+        <a class="ccgatored" href="">售后服务</a>
+        <div class="notice"><img src="images/adv_icon.png" alt=""/><a href="">[新品]美味鸡腿!点击查看!</a></div>
+        <a class="ccgatored cggright" style="margin-right: 0" href="js/modules/reg/reg.html">注册</a>
+        <a class="ccgatored cggright" ng-hide="isget" href="js/modules/login/login.html">登录</a>
+        <a class="cggright" href="" ng-show="isget">欢迎你!!!&nbsp;&nbsp;&nbsp;&nbsp;{{usernick}}</a>
+    </div>
+    <!--logo-->
+    <div class="headlogo">
+        <div style="overflow: hidden;float: left"><img src="images/logo.png" alt=""/></div>
+        <div class="headsearch">
+            <div class="choice">商品</div><div class="choice one">店铺</div>
+            <div class="headsearchdiv"><input ng-model="mysearch" type="text" placeholder="请输入你想查询的关键字"/><input ng-click="myprdsearch()" type="button" class="headsearchbtn" value="搜索"/></div>
+            <p>热门搜索:&nbsp;<a ng-click="seachthistype('牛排')">牛排</a>&nbsp;<a ng-click="seachthistype('水果')">水果</a>&nbsp;<a ng-click="seachthistype('虾')">虾</a>&nbsp;<a ng-click="seachthistype('净菜')">净菜</a></p>
+        </div>
+        <div class="shopcart" ng-click="tocartpage()"></div>
+        <img src="images/home05.png" alt=""/>
+        <img src="images/home07.png" alt=""/>
+    </div>
+    <ul class="shopnav">
+        <li class="all">全部分类商品
+            <div>
+            <ul>
+                <li>肉禽蛋白<br/>
+                    <a href="">肉类</a><a href="" class="cggright">禽类</a><br/>
+                    <a href="">蛋类</a><a href="" class="cggright">腌卤</a></li>
+                <li>水果蔬菜 <br/>
+                    <a href="">国内水果</a><a href="" class="cggright">进口水果</a><br/>
+                    <a href="">时令蔬菜</a></li>
+                <li>海鲜水产 <br/>
+                    <a href="">冻品</a><a href="" class="cggright">冰鲜</a><br/>
+                    <a href="">鲜活</a></li>
+                <li>香香嘴儿 <br/>
+                    <a href="">零食</a><a href="" class="cggright">干果</a><br/>
+                    <a href="">罐头</a></li>
+                <li>综合类 <br/>
+                    <a href="">粮油副食</a><a href="" class="cggright">珍补滋品</a><br/>
+                    <a href="">奶制品</a><a href="" class="cggright">酒水茶饮</a></li>
+                <li>净菜 <br/>
+                    <a href="">素菜</a><a href="" class="cggright">荤菜</a><br/>
+                    <a href="">汤</a></li></ul></div></li>
+        <li ng-click="backhomepage()">首页</li>
+        <li>全部食材</li>
+        <li>香香嘴儿</li>
+        <li>社区订购</li>
+        <li>九分熟水果</li>
+        <li>生活服务</li>
+        <li>基地体验</li>
+        <li>积分换购</li></ul>
+</div>
+
+<!--登录主界面-->
+<div class="mainouter" ng-view>
+
+</div>
+
+
+<!--登录底部-->
+<table class="footertable">
+    <tr>
+        <td><img src="images/3+6_09.png" alt=""/><br/>
+            <a href="">购物流程</a>
+            <a href="">订购方式</a><br/>
+            <a href="">取货指南</a>
+        </td>
+        <td><img src="images/3+6_11.png" alt=""/><br/>
+            <a href="">充值说明</a>
+            <a href="">订单详情</a><br/>
+        </td>
+        <td><img src="images/3+6_13.png" alt=""/><br/>
+            <a href="">申请安装</a>
+        </td>
+        <td style="padding-right: 0"><img src="images/3+6_15.png" alt=""/><br/>
+            <a href="">疑难解答</a>
+        </td>
+    </tr>
+</table>
+<div class="footerdiv">
+    <div class="code">
+        <div class="wexin cggleft"><img src="images/weixin-code.png" alt=""/><br/>微信商城</div>
+        <div class="app cggright"><img src="images/app-code.png" alt=""/><br/>手机客服端APP</div>
+    </div>
+    <div class="chaining">
+        <a href="">企业官网</a>&nbsp;|&nbsp;
+        <a href="">关于我们</a>&nbsp;|&nbsp;
+        <a href="">联系我们</a>&nbsp;|&nbsp;
+        <a href="">快速注册</a>&nbsp;|&nbsp;
+        <a href="">卖家中心</a>&nbsp;|&nbsp;
+        <a href="">百度统计</a><br/>
+        <p>2010-2015 3+6智惠家生鲜网上商城 版权所有，并保留所有权利。 蜀ICP备12015297号 经营性-川B2-20140216</p>
+        <br/>
+        <br/>
+        友情链接&nbsp;:&nbsp;<a href="" style="font-size: 18px">快递查询</a>
+        <br/>
+        <br/>
+        <br/>
+    </div>
+</div>
+<div class="cart" id="car" ng-click="tocartpage()"></div>
+</body>
+<script src="js/angular_modules/shuff.js"></script>
+</html>

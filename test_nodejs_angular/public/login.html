@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <h1>登录</h1>
+
+    <form action="#" >
+        <div>
+            用户名：<input type="text" name="username"/>
+        </div>
+        <div>
+            密码：<input type="password" name="pwd"/>
+        </div>
+        <div>
+            <input type="button" value="提交"/>
+        </div>
+    </form>
+</body>
+<script src="js/jquery-1.11.3.min.js"></script>
+<script>
+    $(function(){
+        $("input:button").click(function(){
+            $.ajax({
+                type:"post",
+                url:"/users/login",
+                data:$("form").serialize(),
+                success:function(data){
+                    if(data){
+                        window.location = "index.html"
+                    }else{
+                        alert("登录失败");
+                    }
+                }
+            });
+        });
+    })
+</script>
+</html>

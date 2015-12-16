@@ -1,0 +1,23 @@
+
+    <div class="main">
+        <link rel="stylesheet" href="js/mobilemodules/searchmobile/search.css"/>
+        <div class="head">
+            <img class="smalllogo" ng-click="backtohome()" src="js/mobilemodules/searchmobile/img/headleft.png" alt=""/>
+            <input type="text" placeholder="水果"/>
+            <img class="message" src="js/mobilemodules/searchmobile/img/headright.png" alt=""/>
+        </div>
+        <table class="searchhead"><tr>
+            <td><a href="">默认</a></td>
+            <td><a href="">价格</a></td>
+            <td><a href="">销量</a></td>
+            <td><a href="">新品</a></td></tr></table>
+        <div class="results">
+            <div class="result" ng-repeat="list in lists">
+                <img ng-src="{{list.p_showimg}}" ng-click="todetailpage(list.p_id)" alt=""/>
+                <h6>{{list.p_name}}</h6><br/>
+                <span>规格:&nbsp;{{list.p_pricedetail}}<span></span></span><br/>
+                <span class="price">￥{{list.p_price}}</span>
+            </div>
+        </div>
+        <div class="footer"><div class="img"><img src="js/mobilemodules/searchmobile/img/smallcar_02.png" alt=""/></div>￥<span></span></div>
+    </div>

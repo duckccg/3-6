@@ -1,0 +1,76 @@
+html{
+    background-color: #c4e3f3;
+    font-size: 16px;
+}
+.main{
+    color: #757575;
+    max-width: 768px;
+    width: 100%;
+    margin: auto;
+}
+.head{
+    background-color: #e4393c;
+    height: 44px;
+    line-height: 44px;
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: white;
+}
+.head a{
+    text-decoration:none;
+    color: white;
+    font-size: 1.3rem;
+    float: right;
+    font-weight: 100;
+}
+.sure{
+    margin-right: 2rem;
+    display: inline-block;
+    line-height: 44px;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    vertical-align: middle;
+    background-position: -2453px -990px;
+}
+.chosed{
+    margin: 0.5rem 0;
+}
+.title{
+    font-size: 1.6rem;
+}
+
+.goods{
+    margin: 0.5rem 0;
+}
+.detail{
+    background-color: white;
+    height: 6rem;
+    vertical-align: middle;
+}
+.detail img{
+    vertical-align: middle;
+    height: 100%;
+    width: 12%;
+}
+h6,p{
+    margin: 0;
+    padding: 0;
+}
+.textdetail{
+    height: 100%;
+    display: inline-block;
+    vertical-align: middle;
+}
+.detail .contro{
+    height: 100%;
+    float: right;
+}
+.detail span{
+    color:#e4393c ;
+}
+.detail a{
+    float: right;
+    color: #e4393c;
+}

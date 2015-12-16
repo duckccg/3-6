@@ -1,0 +1,155 @@
+.main{
+    font-size: 12px;
+    padding: 20px 0;
+    width: 1228px;
+    margin: auto;
+    overflow: hidden;
+    color: #757575;
+}
+h1{ padding-left: 10px;
+}
+.progress{
+    margin: 0 0 30px;
+    float: right;
+}
+.progress .line{
+    position: relative;
+    float: right;
+    width: 160px;
+    height: 5px;
+    background-color: #cccccc;
+}
+.progress .line .circle{
+    line-height: 23px;
+    text-align: center;
+    color: #ffffff;
+    width: 23px;
+    height: 23px;
+    border-radius: 50%;
+    background-color: #cccccc;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+.progress .line:last-child{
+    background-color: #c30d23;
+    color: #ffffff;
+}
+.progress .line:last-child .circle{
+    background-color: #c30d23;
+}
+.caption{
+    font-weight: 900;
+    width: 100%;
+    overflow: hidden;
+    color: #c30d23;
+    height: 42px;
+    line-height: 42px;
+    background-color: #f4a5a4;
+    border-bottom: 1px solid #c30d23;
+    margin: 0 auto 20px;
+}
+.caption .goodsname{
+    margin: 0 240px;
+}
+.caption .make{
+    float: right;
+    margin-right: 90px;
+}
+.caption .all{
+    margin-left: 70px;
+}
+.caption .price{
+    margin: 0 80px 0 90px;
+}
+.address{
+    line-height: 30px;
+    border-bottom: 2px solid #cccccc;
+}
+.detail{
+    background-color: #fff4e8;
+    height: 64px;
+    box-sizing: border-box;
+    margin: 10px 0;
+    padding: 10px;
+}
+.detail input{
+    float: left;
+    margin-right: 45px;
+}
+.detailimg{
+    float: left;
+    width: 500px;
+    overflow: hidden;
+}
+.detailimg img{
+    float: left;
+    width: 40px;
+    height: 40px;
+
+}
+.detail .peisong{
+    color:#c30d23 ;
+    float: none;
+}
+.detail select{
+    float: left;
+    margin-right: 50px;
+}
+.detail span{
+    float: left;
+}
+.detail a{
+    float: right;
+    margin-right: 80px;
+}
+.goodsnum{
+    margin:  0 50px;
+    float: left;
+    width: 110px;
+    height: 28px;
+}
+.detail .goodsnum input{
+    margin: 0;
+}
+.goodsnum input[type=text]{
+    width: 45px;
+    outline: 1px solid #fe9901;
+    border: 1px solid #fe9901;
+    padding-left: 5px;
+}
+.shopped{
+    padding: 0 10px;
+    line-height: 60px;
+    height: 60px;
+    background-color: #f9f9f9;
+    border: 1px solid #999999;
+}
+.shopped span{
+    float: right;
+}
+.account{
+    overflow: hidden;
+    margin: 20px 0;
+}
+.continu{
+    color: #ffffff;
+    padding: 0 10px;
+    margin: 0 10px;
+    float: right;
+    height: 35px;
+    border: none;
+    background-color: #d42230;
+    border-radius: 4px;
+}
+.tocount{
+    color: #ffffff;
+    padding: 0 10px;
+    float: right;
+    height: 35px;
+    border: none;
+    background-color: #fe9901;
+    border-radius: 4px;
+
+}

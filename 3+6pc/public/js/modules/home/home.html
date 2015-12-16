@@ -1,0 +1,244 @@
+<!--<!DOCTYPE html>-->
+<!--<html ng-app="mainApp">-->
+<!--<head lang="en">-->
+    <!--<meta charset="UTF-8">-->
+    <!--<title></title>-->
+    <!--<link rel="stylesheet" href="../../../css/all.css"/>-->
+    <!---->
+    <!--<script src="../../angular_modules/angular.min.js"></script>-->
+    <!--<script>-->
+        <!--var homeModule = angular.module("mainApp",[]);-->
+        <!---->
+    <!--</script>-->
+<!--</head>-->
+<!--<body>-->
+<!--============轮播=============-->
+<div class="main">
+    <link rel="stylesheet" href="js/modules/home/home.css"/>
+<div class="shuff">
+    <div class="shuffpoint">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+    <img src="js/modules/home/img/lunbo1_02.png"  alt=""/>
+    <img src="js/modules/home/img/lunbo2_02.png"  alt=""/>
+    <img src="js/modules/home/img/lunbo4_02.png"  alt=""/>
+    <div class="div one"></div>
+    <div class="div two"></div>
+    <div class="div three"></div>
+    <div class="div four"></div>
+</div>
+<!--================商品楼层====-->
+<div class="floors">
+    <!--===========精品推荐==========-->
+    <div class="quality">
+        <div class="topline"><label for="">精品推荐</label><img src="images/topline.png" alt=""/><span>懂生活 爱美食</span></div>
+        <div class="goods" >
+            <div class="goodsdetail" ng-click="todetailpage(recom.p_id)" ng-repeat="recom in recoms">
+                <div class="goodsimg"><img  ng-src="{{recom.p_showimg}}" alt=""/></div>
+                <div>
+                    <div class="goodsmessage">{{recom.p_name}}</div>
+                    <div class="goodsprice"><span class="price">￥{{recom.p_price}}</span><br/><span class="norms">{{recom.p_pricedetail}}</span></div>
+                </div>
+            </div>
+        </div>
+        <div class="goodsnew">
+            <div class="toptitle"><span>3+6快报</span><a href="">更多&nbsp;></a></div>
+            <div class="news">
+                <p>
+                    <a href="">[通知公告]</a><a href="">国庆期间配送时间更改通知</a>
+                </p>
+                <p>
+                    <a href="">[通知公告]</a><a href="">国庆期间配送时间更改通知</a>
+                </p>
+                <p>
+                    <a href="">[通知公告]</a><a href="">国庆期间配送时间更改通知</a>
+                </p>
+                <p>
+                    <a href="">[通知公告]</a><a href="">国庆期间配送时间更改通知</a>
+                </p>
+                <p>
+                    <a href="">[通知公告]</a><a href="">国庆期间配送时间更改通知</a>
+                </p>
+                <p>
+                    <a href="">[通知公告]</a><a href="">国庆期间配送时间更改通知</a>
+                </p>
+                <p>
+                    <a href="">[通知公告]</a><a href="">国庆期间配送时间更改通知</a>
+                </p>
+                <p>
+                    <a href="">[通知公告]</a><a href="">国庆期间配送时间更改通知</a>
+                </p>
+            </div>
+            <div class="toptitle"><span>客服中心</span></div>
+            <div class="news">
+                <p>客服电话：周一至周六（9:00-17:30）</p>
+                <img src="js/modules/home/img/400.png" alt=""/>
+                <img src="js/modules/home/img/topkf.jpg" alt=""/>
+            </div>
+        </div>
+    </div>
+    <div class="everydaynew">
+        <div class="topline"><label for="">每日新鲜</label><img src="images/topline.png" alt=""/><span>新鲜上市 鲜活心情</span></div>
+        <div class="goods">
+            <div class="goodsdetail" ng-click="todetailpage(newprd.p_id)" ng-repeat="newprd in newprds">
+                <div class="goodsimg"><img ng-src="{{newprd.p_showimg}}" alt=""/></div>
+                <div>
+                    <div class="goodsmessage">{{newprd.p_name}}</div>
+                    <div class="goodsprice"><span class="price">￥{{newprd.p_price}}</span><br/><span class="norms">{{newprd.p_pricedetail}}</span></div>
+                </div>
+            </div>
+
+        </div>
+        <div><img src="js/modules/home/img/milk_03.png" alt=""/></div>
+    </div>
+        <div class="floorone thefloor">
+        <div class="floortop">
+            <div class="floornum">1F</div><span>水果</span>
+            <div class="classify">
+                <table><tr>
+                    <td class="choosed">国内</td>
+                    <td>国外</td>
+                    <td>季节</td>
+                    <td>低糖</td></tr></table></div>
+            <a href="">更多&nbsp;></a>
+        </div>
+        <div class="goods">
+            <div class="mainshow">
+                <img src="js/modules/home/img/1fcc617260-9871-420e-a7d0-181e60eaf29d.jpg" alt=""/>
+            </div>
+            <div class="goodsdetail" ng-click="todetailpage(floor1.p_id)" ng-repeat="floor1 in floor1s">
+                <div class="goodsimg"><img ng-src="{{floor1.p_showimg}}" alt=""/></div>
+                <div>
+                    <div class="goodsmessage">{{floor1.p_name}}</div>
+                    <div class="goodsprice"><span class="price">￥{{floor1.p_price}}</span><br/><span class="norms">{{floor1.p_pricedetail}}</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="floorone thefloor">
+        <div class="floortop">
+            <div class="floornum">2F</div><span>肉禽蛋白</span>
+            <div class="classify">
+                <table><tr>
+                    <td class="choosed">肉类</td>
+                    <td>禽类</td>
+                    <td>蛋类</td>
+                    <td>盐卤</td></tr></table></div>
+            <a href="">更多&nbsp;></a>
+        </div>
+        <div class="goods">
+            <div class="mainshow">
+                <img src="js/modules/home/img/2f821c1f31-9f6d-4095-8943-a7a6547a7be9.jpg" alt=""/>
+            </div>
+            <div class="goodsdetail" ng-click="todetailpage(floor2.p_id)" ng-repeat="floor2 in floor2s">
+                <div class="goodsimg"><img ng-src="{{floor2.p_showimg}}" alt=""/></div>
+                <div>
+                    <div class="goodsmessage">{{floor2.p_name}}</div>
+                    <div class="goodsprice"><span class="price">￥{{floor2.p_price}}</span><br/><span class="norms">{{floor2.p_pricedetail}}</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="floorone thefloor">
+        <div class="floortop">
+            <div class="floornum">3F</div><span>水产海鲜</span>
+            <div class="classify">
+                <table><tr>
+                    <td class="choosed">水产</td>
+                    <td>海鲜</td>
+                    <td>进口</td>
+                    <td>淡水</td></tr></table></div>
+            <a href="">更多&nbsp;></a>
+        </div>
+        <div class="goods">
+            <div class="mainshow">
+                <img src="js/modules/home/img/3f8b36bbfe-749e-4271-81b8-1369c4beadd2.jpg" alt=""/>
+            </div>
+            <div class="goodsdetail" ng-click="todetailpage(floor3.p_id)" ng-repeat="floor3 in floor3s">
+                <div class="goodsimg"><img ng-src="{{floor3.p_showimg}}" alt=""/></div>
+                <div>
+                    <div class="goodsmessage">{{floor3.p_name}}</div>
+                    <div class="goodsprice"><span class="price">￥{{floor3.p_price}}</span><br/><span class="norms">{{floor3.p_pricedetail}}</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="floorone thefloor">
+        <div class="floortop">
+            <div class="floornum">4F</div><span>干果</span>
+            <div class="classify">
+                <table><tr>
+                    <td class="choosed">国内</td>
+                    <td>国外</td>
+                    <td>干果</td>
+                    <td>新疆</td></tr></table></div>
+            <a href="">更多&nbsp;></a>
+        </div>
+        <div class="goods">
+            <div class="mainshow">
+                <img src="js/modules/home/img/4f6a8c0c15-04be-445e-9e00-f64756bfc4af.jpg" alt=""/>
+            </div>
+            <div class="goodsdetail" ng-click="todetailpage(floor4.p_id)" ng-repeat="floor4 in floor4s">
+                <div class="goodsimg"><img ng-src="{{floor4.p_showimg}}" alt=""/></div>
+                <div>
+                    <div class="goodsmessage">{{floor4.p_name}}</div>
+                    <div class="goodsprice"><span class="price">￥{{floor4.p_price}}</span><br/><span class="norms">{{floor4.p_pricedetail}}</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="floorone thefloor">
+        <div class="floortop">
+            <div class="floornum">5F</div><span>山珍</span>
+            <div class="classify">
+                <table><tr>
+                    <td class="choosed">松茸</td>
+                    <td>山珍</td>
+                    <td>菌类</td>
+                    <td>蘑菇</td></tr></table></div>
+            <a href="">更多&nbsp;></a>
+        </div>
+        <div class="goods">
+            <div class="mainshow">
+                <img src="js/modules/home/img/5f3ce7212e-7703-4723-b4d5-0f74d2b79d6c.jpg" alt=""/>
+            </div>
+            <div class="goodsdetail" ng-click="todetailpage(floor5.p_id)" ng-repeat="floor5 in floor5s">
+                <div class="goodsimg"><img ng-src="{{floor5.p_showimg}}" alt=""/></div>
+                <div>
+                    <div class="goodsmessage">{{floor5.p_name}}</div>
+                    <div class="goodsprice"><span class="price">￥{{floor5.p_price}}</span><br/><span class="norms">{{floor5.p_pricedetail}}</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="floorone thefloor">
+        <div class="floortop">
+            <div class="floornum">6F</div><span>成品</span>
+            <div class="classify">
+                <table><tr>
+                    <td class="choosed">炒菜</td>
+                    <td>卤菜</td>
+                    <td>凉拌</td>
+                    <td>蒸菜</td></tr></table></div>
+            <a href="">更多&nbsp;></a>
+        </div>
+        <div class="goods">
+            <div class="mainshow">
+                <img src="js/modules/home/img/6f3075c33b-d44f-4527-98e4-652a94c17142.jpg" alt=""/>
+            </div>
+            <div class="goodsdetail" ng-click="todetailpage(floor6.p_id)" ng-repeat="floor6 in floor6s">
+                <div class="goodsimg"><img ng-src="{{floor6.p_showimg}}" alt=""/></div>
+                <div>
+                    <div class="goodsmessage">{{floor6.p_name}}</div>
+                    <div class="goodsprice"><span class="price">￥{{floor6.p_price}}</span><br/><span class="norms">{{floor6.p_pricedetail}}</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+</div>
+<!--</body>-->
+<!--</html>-->

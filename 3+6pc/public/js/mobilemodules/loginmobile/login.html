@@ -1,0 +1,11 @@
+
+<div class="main">
+    <link rel="stylesheet" href="js/mobilemodules/loginmobile/login.css"/>
+    <div class="head"><span><</span>登录</div>
+    <div class="logo"></div>
+    <div class="telenum"><div></div><input type="text" ng-model="telenum" placeholder="手机号码"/></div>
+    <div class="pwd"><div></div><input type="password" ng-model="pwd" placeholder="请输入密码"/></div>
+    <input id="loginbtn" type="button" ng-click="userlogin()" value="登录"/>
+    <div><a ng-click="toregpage()">快速注册</a>&nbsp;&nbsp;&nbsp;<a href=""></a></div>
+    <div ng-hide="islogin">用户名或密码不正确</div>
+</div>

@@ -1,0 +1,40 @@
+<link rel="stylesheet" href="js/modules/cart/cart.css"/>
+    <div class="main">
+        <h3>我的购物车</h3>
+        <div class="progress">
+            <div class="line"><div class="circle">3</div></div>
+            <div class="line"><div class="circle">2</div></div>
+            <div class="line"><div class="circle">1</div></div>
+        </div>
+        <div class="caption">
+            <span>店铺名称</span>
+            <span class="goodsname">商品名称</span>
+            <span class="time">配送时期</span>
+            <span class="price">产品单价</span>
+            <span class="num">产品数量</span>
+            <span class="all">小结</span>
+            <span class="make">操作</span>
+        </div>
+        <div style="overflow: hidden" ng-hide="ishide"  ng-repeat="cart in carts">
+        <div class="address"><input type="checkbox"/><a href="">{{cart.p_store}}</a>&nbsp;&nbsp;<span class="ccgatored">本店第三方物流配送,满68元免费</span></div>
+        <div class="detail">
+            <input type="checkbox" ng-model="checkarr[cart.prdid].ischecked" ng-click="buythisgood(cart.prdid)"/>
+            <div class="detailimg">
+                <img ng-src="images/showimg/{{cart.p_showimg}}.jpg" alt=""/>
+                <label for="">{{cart.p_name}}</label><br/><a href="" class="peisong">[配送时间]:天天配送</a>
+            </div>
+            <select name="" id="">
+                <option value="">2015-12-03 周三</option></select>
+            <span>￥{{cart.p_price}}</span>
+            <div class="goodsnum"><input type="button" ng-click="delcount(cart.prdid)" value="-"/><input type="text" ng-blur="handinput(cart.prdid)" ng-model="arr[cart.prdid].num"/><input ng-click="addcount(cart.prdid)" type="button" value="+"/></div>
+            <span>￥{{cart.p_price*arr[cart.prdid].num}}</span>
+            <a ng-click="deletecart(cart.car_id)">删除</a>
+        </div>
+        </div>
+        <div ng-show="ishide">你还没有选购任何商品哦!!!!!!快去选购吧</div>
+        <div class="shopped">
+            <input type="checkbox" ng-model="allchecked" ng-click="buyallgoods()" /><label for="">全选</label>
+            <span>已选择<label class="ccgatored" for="">{{cartnum}}</label>件商品 总价(不含运费):<label for="" style="font-size: 16px;font-weight: 900" class="ccgatored">￥{{total}}</label></span>
+        </div>
+        <div class="account"><input type="button" ng-click="toaccounts()" class="tocount" value="去结算"/><input type="button" class="continu" ng-click="goshopping()" value="继续购物"/></div>
+    </div>

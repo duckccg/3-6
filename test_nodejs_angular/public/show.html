@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="indexModule">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>Bootstrap 101 Template</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <script src="js/angular.min.js"></script>
+    <script >
+
+        var indexModule = angular.module("indexModule",[]);
+        indexModule.controller("IndexController",function($scope,$http){
+            $scope.showAll = function(curpage,num){
+                curpage = parseInt(curpage)+num;
+
+                $http.get("/students/showAll?curpage="+curpage+"&eachpage=3")
+                        .success(function(data){
+                            console.log(data);
+                            $scope.page = data;
+                            $scope.pageAry = [];
+                            for(var i = 1;i <= $scope.page.maxpage;i++){
+                                $scope.pageAry.push(i);
+                            }
+                        });
+            };
+            $scope.add = function(){
+                $http.post("/students/addStudent",{
+                    username:$scope.addUsername,
+                    sex:$scope.addSex,
+                    age:$scope.addAge
+                }).success(function(){
+                    $scope.showAll(1,0);
+                });
+            }
+            $scope.findById = function(id){
+                $http.get("/students/showById/"+id).success(function(data){
+                    $scope.updateId = data[0].s_id;
+                    $scope.updateUsername = data[0].s_name;
+                    $scope.updateSex = data[0].s_sex;
+                    $scope.updateAge = data[0].s_age;
+                });
+            }
+            $scope.update = function(){
+                $http.post("/students/updateStudent/"+$scope.updateId,{
+                    username:$scope.updateUsername,
+                    sex:$scope.updateSex,
+                    age:$scope.updateAge
+                }).success(function(){
+                    $scope.showAll(1,0);
+                });
+            }
+            $scope.del = function(id){
+                $http.get("/students/delStudent/"+id).success(function(){
+                    $scope.showAll(1,0);
+                });
+            }
+            $scope.showAll(1,0);
+        });
+    </script>
+    <style>
+        .container{
+            width:1000px !important;
+        }
+
+    </style>
+</head>
+<body ng-controller="IndexController">
+<h1>首页</h1>
+<div>
+    <h3>增加</h3>
+    <form id="addForm">
+        姓名：<input type="text" name="username" ng-model="addUsername"/>
+        性别：<input type="text" name="sex" ng-model="addSex"/>
+        年龄：<input type="text" name="age" ng-model="addAge"/>
+        <input type="button" value="增加" ng-click="add()"/>
+    </form>
+</div>
+<div>
+    <h3>修改</h3>
+    <form id="updateForm">
+        姓名：<input type="text" name="username" ng-model="updateUsername"/>
+        性别：<input type="text" name="sex" ng-model="updateSex"/>
+        年龄：<input type="text" name="age" ng-model="updateAge"/>
+        <input type="hidden" name="id" ng-model="updateId"/>
+        <input type="button" value="修改" ng-click="update()"/>
+    </form>
+</div>
+<div>
+    <form id="searchForm" action="#">
+        <h3>搜索</h3>
+        <select name="type" id="">
+            <option value="name">姓名</option>
+            <option value="sex">性别</option>
+            <option value="age">年龄</option>
+        </select>
+        <input type="text" name="value" id="search"/>
+        <input type="button" value="搜索"/>
+    </form>
+</div>
+<table>
+    <tr>
+        <th>编号</th>
+        <th>姓名</th>
+        <th>性别</th>
+        <th>年龄</th>
+    </tr>
+    <tbody id="tb">
+    <tr ng-repeat="stu in page.data">
+        <td>{{stu.s_id}}</td>
+        <td>{{stu.s_name}}</td>
+        <td>{{stu.s_sex}}</td>
+        <td>{{stu.s_age}}</td>
+        <td>
+            <input type="button" value="修改" ng-click="findById(stu.s_id)"/>
+            <input type="button" value="删除" ng-click="del(stu.s_id)"/>
+        </td>
+    </tr>
+    </tbody>
+</table>
+<ul class="pagination">
+    <li ng-hide="page.curpage <= 1">
+        <a href="#" ng-click="showAll(page.curpage,-1)" aria-label="Previous" >
+            <span aria-hidden="true">&laquo;</span>
+        </a>
+    </li>
+    <li ng-repeat="i in pageAry"><a href="#" ng-click="showAll(i,0)">{{i}}</a></li>
+    <li ng-hide="page.curpage >= page.maxpage">
+
+        <a href="#" ng-click="showAll(page.curpage,1)" aria-label="Next">
+            <span aria-hidden="true">&raquo;</span>
+        </a>
+    </li>
+</ul>
+</body>
+<script src="js/jquery-1.11.3.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="js/bootstrap.min.js"></script>
+
+</html>

@@ -1,0 +1,107 @@
+html{
+    font-size: 16px;
+}
+.main{
+    padding: 0 0 50px;
+    background-color: #eeeeee;
+    margin:0 auto 50px;
+    color: #757575;
+    width: 100%;
+    max-width: 768px;
+}
+a{
+    text-decoration: none;
+    color: #000000;
+}
+.head{
+    height: 44px;
+    line-height: 44px;
+    background-color:#c30d23;
+    width: 100%;
+    color: #ffffff;
+    font-weight: 900;
+    font-size: 1.8rem;
+    text-align: center;
+}
+.smalllogo{
+    float: left;
+}
+.message{
+    float: right;
+}
+.goodsimg{
+    background-color: #ffffff;
+    margin: 5px 0;
+    font-size: 0;
+    width: 100%;
+    overflow: hidden;
+}
+.goodsimg img{
+    width: 50%;
+    display: block;
+    margin: auto;
+}
+.textdetail{
+    background-color: #ffffff;
+    margin: 5px 0;
+    width: 100%;
+    overflow: hidden;
+}
+.textdetail input[type=text]{
+    width: 3rem;
+}
+.store{
+    background-color: #ffffff;
+    margin: 5px 0;
+    width: 100%;
+    overflow: hidden;
+}
+.store img{
+    width: 10%;
+    float: left;
+}
+.tostore{
+    height: 40px;
+    border-radius: 4px;
+    color: #ffffff;
+    line-height: 40px;
+    text-align: center;
+    background-color:#c30d23 ;
+    margin: 10px 0;
+}
+.evaluate{
+    width: 100%;
+    text-align: center;
+    border-spacing:0;
+}
+.prddetail img{
+    width: 100%;
+}
+.choosed{
+    background-color:#c30d23
+}
+.footer{
+    max-width: 768px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    border-top: 1px solid #757575;
+    height: 2rem;
+    line-height: 2rem;
+    background-color: #e2e2e2;
+}
+.ccgleft{
+    float: right;
+    background-color: #fd6c03;
+}
+.ccgright{
+    float: right;
+    background-color: #fd4403;
+}
+.footer input{
+    height: 1.8rem;
+    color: #ffffff;
+    border: none;
+    outline: none;
+    border-radius: 3px;
+}

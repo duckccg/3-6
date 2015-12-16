@@ -1,0 +1,109 @@
+html{
+    font-size: 16px;
+}
+.main{
+    position: relative;
+    margin: auto;
+    color: #666666;
+    width: 100%;
+    max-width: 768px;
+}
+a{
+    text-decoration: none;
+    color: #000000;
+}
+.head{
+    height: 44px;
+    line-height: 44px;
+    background-color:#c30d23;
+    width: 100%;
+    color: #ffffff;
+    font-weight: 900;
+    font-size: 1.8rem;
+    text-align: center;
+}
+.head .inputout{
+    background-color: #ffffff;
+    border-radius: 0.3rem;
+    display: inline-block;
+    height: 27px;
+    width: 60%;
+    vertical-align: middle;
+    text-align: left;
+}
+.head .inputout img{
+    float: left;
+    margin-left: 10px;
+}
+.head .inputout input{
+    float: left;
+    border: none;
+    outline: none;
+    height: 25px;
+    width: 60%;
+}
+.smalllogo{
+    float: left;
+}
+.message{
+    float: right;
+}
+.shuff{
+    overflow: hidden;
+    width: 100%;
+}
+.shuffinner{
+    font-size: 0;
+    width: 200%;
+}
+.shuff img{
+    width: 50%;
+}
+.goodsclass{
+    font-size: 0;
+    overflow: hidden;
+}
+.goodsclass img{
+    width: 25%;
+}
+.floors{
+    overflow: hidden;
+}
+.ccgleft{
+    float: left;
+}
+.ccgright{
+    float: right;
+}
+.ccgcolortored{
+    color:#c30d23 ;
+}
+.floortop{
+    background: #f9f9f9;
+    padding: 0 5px;
+}
+.floortop a{
+    float: right;
+}
+.goods{
+    width: 46%;
+    margin: 2%;
+    box-shadow: 0 0 1px 1px #eeeeee;
+}
+.goods img{
+    width: 100%;
+}
+
+.footer{
+    max-width: 768px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    border-top: 1px solid #757575;
+    height: 2.8rem;
+    line-height: 2.8rem;
+    background-color: #e2e2e2;
+}
+.footer img{
+    margin: 0 10%;
+}

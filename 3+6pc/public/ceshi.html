@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+</body>
+<script src="js/angular_modules/jquery-1.11.3.min.js"></script>
+<script>
+    $(function(){
+        $.ajax({
+            type:"post",
+            url:"/cart/findcart",
+            data:{id:6},
+            success:function(r){
+                console.log(r)
+            }
+        })
+    });
+    console.log(parseInt("￥1111"))
+
+</script>
+</html>

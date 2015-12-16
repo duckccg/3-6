@@ -1,0 +1,75 @@
+html{
+    font-size: 16px;
+}
+.main{
+    background-color: #eeeeee;
+    margin: auto;
+    color: #666666;
+    width: 100%;
+    max-width: 768px;
+}
+a{
+    text-decoration: none;
+    color: #000000;
+}
+.head{
+    height: 44px;
+    background-color:#c30d23;
+    width: 100%;
+    color: #ffffff;
+    font-weight: 900;
+    font-size: 1.8rem;
+    text-align: center;
+}
+.head input{
+    border-radius: 0.3rem;
+    background: #ffffff url("img/glass.png")  no-repeat;
+    padding-left:3rem;
+    height: 60%;
+    width: 60%;
+    border: none;
+    outline: none;
+}
+.smalllogo{
+    float: left;
+}
+.message{
+    float: right;
+}
+.searchhead{
+    overflow: hidden;
+    margin: 10px 0;
+    background-color: #ffffff;
+    width: 100%;
+    text-align: center;
+}
+.results{
+    overflow: hidden;
+    margin: 10px 0;
+}
+.result{
+    background-color: #ffffff;
+    margin: 10px 0;
+    overflow: hidden;
+}
+.result img{
+    height: 80px;
+    width: 10%;
+    float: left;
+}
+.result h6{
+    display: inline;
+}
+.result .price{
+    color: #ff6800;
+}
+.footer{
+    color: #f4f4f4;
+    border-top: 1px solid #757575;
+    height: 43px;
+    line-height: 43px;
+    background-color: #5a5a5a;
+}
+.footer .img{
+    float: left;
+}

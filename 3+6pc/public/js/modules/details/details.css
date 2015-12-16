@@ -1,0 +1,202 @@
+
+.main{
+    margin:  0 auto;
+    width: 1228px;
+    overflow: hidden;
+    padding: 0 20px;
+    font-size: 12px;
+    color: #8a8a8a;
+}
+.position{
+    margin: 15px 0;
+    padding-left: 18px;
+}
+.showdetail{
+    overflow: hidden;
+}
+.imgdetail{
+    position: relative;
+    float: left;
+}
+#imgfly{
+    position: absolute;
+    width: 340px;
+    box-shadow: 0 0 0 1px #8a8a8a;
+    left: 0;
+}
+#img2{
+    position: absolute;
+    width: 850px;
+}
+#div3{
+    display: none;
+    overflow: hidden;
+    position: absolute;
+    width: 340px;
+    height: 340px;
+    left: 100%;
+    top: 0;
+}
+#div2{
+    cursor: move;
+    background-color: #398439;
+    opacity: 0.4;
+    display: none;
+    z-index: 5;
+    position: absolute;
+    width: 136px;
+    height: 136px;
+}
+.imgdetail p{
+    float: left;
+    height: 47px;
+    line-height: 47px;
+}
+.smallimg{
+    outline: 1px solid #ff0000;
+    vertical-align: middle;
+    margin: 0 20px;
+    width: 47px;
+    height: 47px;
+}
+.bigimg{
+    position: relative;
+    z-index: 4;
+    width: 340px;
+    height: 340px;
+    box-shadow: 0 0 0 1px #8a8a8a;
+    float: left;
+}
+.textdetail{
+    width: 630px;
+    float: left;
+    margin-left: 20px;
+}
+.privilege{
+    line-height: 42px;
+    height: 42px;
+    border: none;
+    background-color: #f7f7f7;
+    border-radius: 4px;
+}
+.add{
+    line-height: 70px;
+    height: 70px;
+    border-top: 1px solid #999999;
+    border-bottom: 1px solid #999999;
+}
+.add input[type=text]{
+    outline: 1px solid #fe9901;
+    border: 1px solid #fe9901;
+    padding-left: 5px;
+    width: 44px;
+}
+.now{
+    color: #ffffff;
+    padding: 0 10px;
+    height: 35px;
+    border: none;
+    background-color: #fe9901;
+    border-radius: 4px;
+}
+.addgoods{
+    color: #ffffff;
+    padding: 0 10px;
+    margin: 0 10px;
+    height: 35px;
+    border: none;
+    background-color: #d42230;
+    border-radius: 4px;
+}
+.evaluateout{
+    overflow: hidden;
+    padding:  20px 0;
+}
+/*===========tuijian=========*/
+.recommendout{
+    overflow: hidden;
+    float: left;
+}
+.recommend{
+    box-shadow: 0 0 0 1px #e8e8e8;
+    width: 210px;
+}
+.recommend .top{
+    /*box-shadow: 0 0 0 1px #e8e8e8;*/
+    height: 30px;
+    line-height: 30px;
+    font-weight: 900;
+    padding-left: 12px;
+}
+.recommend ul{
+    width: 90%;
+    margin: auto;
+}
+.recommend li{
+    margin-bottom: 20px;
+    height: 67px;
+    border-bottom: 1px dashed #e8e8e8;
+}
+.recommend li img{
+    float: left;
+    margin: 5px 15px 0;
+    width: 50px;
+}
+.recommend li div label{
+    color: #d42230;
+}
+.recommend li div{
+    text-align: right;
+    margin-top: 5px;
+    max-width: 60%;
+    float: right;
+}
+.evaluate{
+    width: 980px;
+    float: right;
+    /*box-shadow: 0 0 0 1px #999999;*/
+}
+.title{
+    height: 34px;
+    border-bottom: 1px solid #d42230;
+}
+.title div{
+    cursor: pointer;
+    float: left;
+    line-height: 34px;
+    text-align: center;
+    width: 95px;
+    height: 34px;
+    box-shadow: 0 0 0 1px #d42230;
+}
+.title div:hover{
+    background-color: #d42230;
+    color: #ffffff;
+}
+.evaluate .prddetail{
+    width: 100%;
+    font-size: 0;
+}
+.evaluate .prddetail img{
+    width: 100%;
+}
+.evaluate .prdmessage{
+    width: 100%;
+}
+.evaluate .prdmessage div{
+    width: 100%;
+    margin: 20px auto;
+}
+.choosed{
+    background-color: #d42230;
+}
+.messagediv{
+    box-shadow: 0 0 2px 3px goldenrod;
+}
+@keyframes rotate {
+    from{
+        transform: rotate(0deg);
+    }to{
+         transform: rotate(2880deg);
+     }
+}

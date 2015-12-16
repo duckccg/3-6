@@ -1,0 +1,25 @@
+
+    <div class="main">
+        <link rel="stylesheet" href="js/mobilemodules/cartmobile/cart.css"/>
+        <div class="head">购物车<a href="">编辑</a></div>
+        <div class="goods" ng-repeat="cart in carts">
+            <div class="chosed">
+            <div class="title"><div class="sure"><input type="checkbox" checked/></div><span>{{cart.p_store}}</span></div></div>
+            <div class="detail">
+                <div class="sure"><input type="checkbox" checked/></div>
+                <img ng-src="images/showimg/{{cart.p_showimg}}.jpg" alt=""/>
+                <div class="textdetail">
+                    <h6>{{cart.p_name}}</h6>
+                    <p>规&nbsp;&nbsp;&nbsp;&nbsp;格:&nbsp;&nbsp;{{cart.p_pricedetail}}</p>
+                    <p>配送日期:&nbsp;&nbsp;</p>
+                    <p>数&nbsp;&nbsp;&nbsp;&nbsp;量:&nbsp;&nbsp;{{cart.car_count}}</p>
+                </div>
+                <div class="contro">
+                <span>¥{{cart.p_price}}</span><br/><br/>
+                <a ng-click="deletecart(cart.car_id)">删除</a>
+                </div>
+            </div>
+        </div>
+        <div ng-show="ishide">你还没有选购任何商品哦!!!!!!快去选购吧</div>
+        <div>共计:&nbsp;&nbsp;&nbsp;{{total}}</div>
+    </div>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="regModule">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="js/angular.min.js"></script>
+    <script>
+        var regModule = angular.module("regModule",[]);
+        regModule.controller("RegController",function($scope,$http){
+            $scope.validateUsername = function(){
+                console.log(/^[0-9a-zA-Z]$/.test($scope.username));
+                if($scope.username && /^[0-9a-zA-Z]{6,20}$/.test($scope.username)){
+                    $http.post("/users/validateName",{name:$scope.username})
+                            .success(function(data){
+                                if(data == "true"){
+                                    $scope.usernameLabel = "正确";
+                                    $scope.isUsernameRight = "green";
+                                }else{
+                                    $scope.usernameLabel = "用户名已存在";
+                                    $scope.isUsernameRight = "red";
+                                }
+                            });
+
+                }else{
+                    $scope.usernameLabel = "格式不正确";
+                    $scope.isUsernameRight = "red";
+                }
+            }
+            $scope.validatePwd = function(){
+                if($scope.pwd && /^.{6,}$/.test($scope.pwd)){
+                    $scope.pwdLabel = "正确";
+                    $scope.isPwdRight = "green";
+                }else{
+                    $scope.pwdLabel = "格式不正确";
+                    $scope.isPwdRight = "red";
+                }
+            }
+            $scope.reg = function(){
+                $scope.validateUsername();
+                $scope.validatePwd();
+                if($scope.isUsernameRight == "green"
+                    && $scope.isPwdRight == "green"){
+                    $http.post("/users/reg",{username:$scope.username,password:$scope.pwd})
+                            .success(function(){
+                                window.location = "index.html";
+                            });
+                }
+            }
+        });
+    </script>
+</head>
+<body>
+<div ng-controller="RegController">
+<form action="#" >
+    <div >
+        用户名：<input type="text" name="username" ng-model="username" ng-blur="validateUsername()"/>
+        <label ng-style="{color:isUsernameRight}">{{usernameLabel}}</label>
+    </div>
+    <div >
+        密码：<input type="password" name="pwd" ng-model="pwd" ng-blur="validatePwd()"/>
+        <label ng-style="{color:isPwdRight}">{{pwdLabel}}</label>
+    </div>
+    <div >
+        确认密码：<input type="password" name="confirmPwd"/>
+    </div>
+    <div >
+        <input type="button" value="提交" ng-click="reg()"/>
+    </div>
+</form>
+</div>
+</body>
+
+</html>

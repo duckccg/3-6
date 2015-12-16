@@ -1,0 +1,15 @@
+
+    <div class="main">
+        <link rel="stylesheet" href="js/mobilemodules/regmobile/reg.css"/>
+            <div class="head"><span><</span>注册</div>
+            <div><a href="#">*</a>手机号码&nbsp;&nbsp;<input class="full" type="text" ng-model="telenum" placeholder="请输入手机号码"/></div>
+            <div ng-hide="istelenum" class="ccgred">请输入正确的手机号</div>
+            <div><a href="#">*</a>验&nbsp;证&nbsp;码&nbsp;&nbsp;<input class="harf" type="text"/><input type="button" value="获取验证码"/></div>
+            <div ng-hide="istele" class="ccgred">该手机号已被注册</div>
+            <div><a href="#">*</a>登录密码&nbsp;&nbsp;<input class="full" ng-model="pwd" type="text" placeholder="6-20位数字字母"/></div>
+            <div ng-hide="ispwdhide" class="ccgred">密码格式不正确</div>
+            <div><a href="#">*</a>确认密码&nbsp;&nbsp;<input class="full" ng-model="rpwd" type="text" placeholder=""/></div>
+            <div ng-hide="isrpwdhide" class="ccgred">两次输入密码不一致</div>
+            <input id="regbtn" type="button" ng-click="reguser()" value="注册"/>
+            <div>已注册?&nbsp;&nbsp;<a ng-click="tologinpage()">直接登录</a></div>
+    </div>

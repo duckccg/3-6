@@ -1,0 +1,76 @@
+
+
+<div ng-hide="isLogin">
+    <a href="#">登录</a>/<a href="#">注册</a>
+</div>
+<div ng-show="isLogin">
+    <a href="#">欢迎登录，{{users.u_name}}</a>/<a href="#">注册</a>
+</div>
+<hr/>
+<h1>首页</h1>
+
+<div>
+    <h3>增加</h3>
+    <form id="addForm">
+        姓名：<input type="text" name="username" ng-model="addUsername"/>
+        性别：<input type="text" name="sex" ng-model="addSex"/>
+        年龄：<input type="text" name="age" ng-model="addAge"/>
+        <input type="button" value="增加" ng-click="add()"/>
+    </form>
+</div>
+<div>
+    <h3>修改</h3>
+    <form id="updateForm">
+        姓名：<input type="text" name="username" ng-model="updateUsername"/>
+        性别：<input type="text" name="sex" ng-model="updateSex"/>
+        年龄：<input type="text" name="age" ng-model="updateAge"/>
+        <input type="hidden" name="id" ng-model="updateId"/>
+        <input type="button" value="修改" ng-click="update()"/>
+    </form>
+</div>
+<div>
+    <form id="searchForm" action="#">
+        <h3>搜索</h3>
+        <select name="type" id="">
+            <option value="name">姓名</option>
+            <option value="sex">性别</option>
+            <option value="age">年龄</option>
+        </select>
+        <input type="text" name="value" id="search"/>
+        <input type="button" value="搜索"/>
+    </form>
+</div>
+<table>
+    <tr>
+        <th>编号</th>
+        <th>姓名</th>
+        <th>性别</th>
+        <th>年龄</th>
+    </tr>
+    <tbody id="tb">
+    <tr ng-repeat="stu in page.data">
+        <td>{{stu.s_id}}</td>
+        <td>{{stu.s_name}}</td>
+        <td>{{stu.s_sex}}</td>
+        <td>{{stu.s_age}}</td>
+        <td>
+            <input type="button" value="修改" ng-click="findById(stu.s_id)"/>
+            <input type="button" value="删除" ng-click="del(stu.s_id)"/>
+        </td>
+    </tr>
+    </tbody>
+</table>
+<ul class="pagination">
+    <li ng-hide="page.curpage <= 1">
+        <a ng-click="showAll(parseInt(page.curpage)-1)" aria-label="Previous" >
+            <span aria-hidden="true">&laquo;</span>
+        </a>
+    </li>
+    <li ng-repeat="i in pageAry"><a ng-click="showAll(i)">{{i}}</a></li>
+    <li ng-hide="page.curpage >= page.maxpage">
+
+        <a ng-click="showAll(parseInt(page.curpage)+1)" aria-label="Next">
+            <span aria-hidden="true">&raquo;</span>
+        </a>
+    </li>
+</ul>

@@ -1,0 +1,74 @@
+    <link rel="stylesheet" href="js/modules/details/details.css"/>
+    <div class="main">
+        <div class="position">
+            当前位置 : <a href="">首页</a>&nbsp;><a href="">水果</a>&nbsp;&nbsp;>&nbsp;&nbsp;>&nbsp;<a href="">{{product.p_store}}</a>
+        </div>
+        <div class="showdetail">
+            <div class="imgdetail">
+                <div id="div2"></div>
+            <img id="imgfly"  ng-src="{{zoomimgmiddle}}" alt=""/>
+            <img class="bigimg" id="img1" ng-src="{{zoomimgmiddle}}" alt=""/><br/>
+                <div id="div3"><img id="img2" ng-src="{{zoomimgmiddle}}" alt=""/></div>
+            <p><input type="button" value="<<<<"/><img class="smallimg" ng-src="{{zoomimgsmall}}" alt=""/><input
+                    type="button" value=">>>>"/></p>
+            </div>
+            <div class="textdetail">
+                <h3>{{product.p_name}}</h3>
+                <p class="ccgatored">{{product.p_pricedetail}}</p>
+                <div class="privilege">
+                优惠价&nbsp;&nbsp;:<label class="ccgatored" for="">￥{{product.p_price}}</label>/{{product.p_pricedetail}}
+                </div>
+                <p>产&nbsp;&nbsp;&nbsp;&nbsp;地:&nbsp;&nbsp;{{product.p_field}}</p>
+                <p class="ccgatored">配送费用:&nbsp;&nbsp;本店由第三方物流配送</p>
+                <p>配送范围:&nbsp;&nbsp;成都市</p>
+                <p>配送时间:&nbsp;&nbsp;天天配送</p>
+                <div class="add">
+                    购物数量:&nbsp;&nbsp;<input type="button" ng-click="delcount()" value="-"/><input type="text" ng-model="prdcount" /><input type="button" ng-click="addcount()" value="+"/>&nbsp;&nbsp;<label
+                        for="" class="ccgatored">库存500件</label>
+                </div>
+                <p>配送服务:&nbsp;&nbsp;[店铺]配送</p>
+                <div><input class="now" type="button" value="立即购买"/><input class="addgoods" onclick="letfly()" ng-click="addtocart()"  type="button" value="加入购物车"/></div>
+            </div>
+        </div>
+        <div class="evaluateout">
+            <div class="recommendout">
+                <div class="recommend">
+                    <div class="top">推荐商品</div>
+                    <ul class="hot">
+                        <li ng-click="todetailpage(recom.p_id)" ng-repeat="recom in recoms">
+                            <img ng-src="{{recom.p_showimg}}" alt=""/>
+                            <div><a href="">{{recom.p_name}}</a><br/>
+                                <span><label for="">￥{{recom.p_price}}</label>/{{recom.p_pricedetail}}</span></div>
+                        </li>
+
+                    </ul>
+                    <ul></ul>
+                </div>
+                <div class="recommend">
+                    <div class="top">最近浏览</div>
+                    <ul>
+                        <li>暂无浏览记录</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="evaluate">
+                <div class="title">
+                <div ng-class="detailchoosed" ng-click="detailclick()">商品详情</div><div ng-class="messagechoosed" ng-click="messageclick()">商品评价<label for="">({{messagecount}})</label></div><div>售后服务</div></div>
+                <div class="prddetail"  ng-hide="isdetail">
+                    <img ng-src="{{detail}}" alt="" ng-repeat="detail in detailimgs" />
+                </div>
+                <div class="prdmessage" ng-show="isdetail">
+                    <div class="messagediv" ng-repeat="message in messages">
+                        <p>{{message.message_content}}</p>
+                        <p>评论时间:{{message.message_data}}</p>
+                        <p>品&nbsp;论&nbsp;者:{{message.message_user}}</p>
+                    </div>
+                    <div>
+                        <textarea ng-model="messagecontent" placeholder="请输入您对此商品的评价!" name="" id="" cols="100" style="width: 100%" rows="5"></textarea><br/>
+                        您的名字:<input ng-model="messagenick" placeholder="匿名" type="text" /><br/>
+                        <input type="button" ng-click="addMessage()" value="评论"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

@@ -1,0 +1,56 @@
+
+    <div class="main">
+        <link rel="stylesheet" href="js/mobilemodules/homemobile/home.css"/>
+        <div class="head">
+            <img class="smalllogo"  src="js/mobilemodules/homemobile/img/smalllogo.png" alt=""/>
+            <div class="inputout"><img ng-click="tosearchpage()" src="js/mobilemodules/homemobile/img/glass.png" alt=""/><input type="text" ng-model="searchcontent" placeholder="搜素你喜欢的食品,店铺"/></div>
+            <img class="message" src="js/mobilemodules/homemobile/img/message.png" alt=""/>
+        </div>
+        <div class="shuff">
+            <div class="shuffinner">
+                <img class="shuffimg" src="js/mobilemodules/homemobile/img/lunbo1.jpg" alt=""/>
+                <img class="shuffimg" src="js/mobilemodules/homemobile/img/lunbo2.jpg" alt=""/>
+            </div>
+        </div>
+        <div class="goodsclass">
+            <a href=""><img src="js/mobilemodules/homemobile/img/class_11.png" alt=""/></a>
+            <a href=""><img src="js/mobilemodules/homemobile/img/class_10.png" alt=""/></a>
+            <a href=""><img src="js/mobilemodules/homemobile/img/class_9.png" alt=""/></a>
+            <a href=""><img src="js/mobilemodules/homemobile/img/class_8.png" alt=""/></a>
+            <a href=""><img src="js/mobilemodules/homemobile/img/class_7.png" alt=""/></a>
+            <a href=""><img src="js/mobilemodules/homemobile/img/class_6.png" alt=""/></a>
+            <a href=""><img src="js/mobilemodules/homemobile/img/class_5.png" alt=""/></a>
+            <a href=""><img src="js/mobilemodules/homemobile/img/class_4.png" alt=""/></a>
+        </div>
+        <div class="floors">
+            <div class="floor floorone">
+                <div class="floortop"><label for="" class="ccgcolortored">新品上架</label><a href="">更多新品 <label
+                    class="ccgcolortored"    for="">></label>></a></div>
+                <div class="goods ccgleft" ng-click="todetailpage(newprd.p_id)" ng-repeat="newprd in newprds">
+                    <img ng-src="{{newprd.p_showimg}}" alt=""/><br/>
+                    <span>{{newprd.p_name}}</span><br/>
+                    <label class="ccgcolortored" for="">￥{{newprd.p_price}}&nbsp;&nbsp;&nbsp;&nbsp;/{{newprd.p_pricedetail}}</label>
+                </div>
+            </div>
+            <div class="floor floorone">
+                <div class="floortop"><label for="" class="ccgcolortored">精品推荐</label><a href="">更多 <label
+                        class="ccgcolortored"    for="">></label>></a></div>
+                <div class="goods ccgleft" ng-click="todetailpage(recom.p_id)" ng-repeat="recom in recoms">
+                    <img ng-src="{{recom.p_showimg}}" alt=""/><br/>
+                    <span>{{recom.p_name}}</span><br/>
+                    <label class="ccgcolortored" for="">￥{{recom.p_price}}&nbsp;&nbsp;&nbsp;&nbsp;/{{recom.p_pricedetail}}</label>
+                </div>
+            </div>
+            <div class="floor floorone">
+                <div class="floortop"><label for="" class="ccgcolortored">全部商品</label><a href="">更多 <label
+                        class="ccgcolortored"    for="">></label>></a></div>
+                <div class="goods ccgleft" ng-click="todetailpage(floor1.p_id)" ng-repeat="floor1 in floor1s ">
+                    <img ng-src="{{floor1.p_showimg}}" alt=""/><br/>
+                    <span>{{floor1.p_name}}</span><br/>
+                    <label class="ccgcolortored" for="">￥{{floor1.p_price}}&nbsp;&nbsp;/{{floor1.p_pricedetail}}</label>
+                </div>
+            </div>
+            <h1 class="ccgcolortored">全部商品</h1>
+        </div>
+        <div class="footer"><img ng-click="tocartpage()" src="js/mobilemodules/homemobile/img/smallcar.png" alt=""/><img ng-click="tologinpage()" src="js/mobilemodules/homemobile/img/tologin.png" alt=""/><img class="ccgright" src="js/mobilemodules/homemobile/img/smallclass.png" alt=""/></div>
+    </div>

@@ -1,0 +1,18 @@
+<h1>注册</h1>
+<form action="#" name="regForm" >
+    <div >
+        用户名：<input type="text" name="username" ng-model="username" required ng-pattern="" is-use/>
+        <!--<label ng-style="{color:isUsernameRight}">{{usernameLabel}}</label>-->
+        <label>{{regForm.username.$error.use}}</label>
+    </div>
+    <div >
+        密码：<input type="password" name="pwd" ng-model="pwd" ng-blur="validatePwd()"/>
+        <label ng-style="{color:isPwdRight}">{{pwdLabel}}</label>
+    </div>
+    <div >
+        确认密码：<input type="password" name="confirmPwd" is-same="pwd"/>
+    </div>
+    <div >
+        <input type="button" value="提交" ng-click="reg()"/>
+    </div>
+</form>

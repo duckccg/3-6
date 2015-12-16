@@ -1,0 +1,55 @@
+html{
+    font-size: 16px;
+}
+.main{
+    margin: auto;
+    color: #757575;
+    width: 100%;
+    max-width: 768px;
+}
+.main div{
+    margin: 10px auto;
+    box-shadow: 0 0 0 1px #757575;
+    height: 2.75rem;
+    overflow: hidden;
+    line-height: 2.75rem;
+}
+a{
+    text-decoration: none;
+    color: #c30d23;
+}
+.head{
+    background-color:#c30d23;
+    width: 100%;
+    color: #ffffff;
+    font-weight: 900;
+    font-size: 1.8rem;
+    text-align: center;
+}
+.head span{
+    float: left;
+}
+.full{
+    height: 70%;
+    width: 70%;
+}
+.harf{
+    height: 70%;
+    margin-right: 1rem;
+    width: 35%;
+}
+input[type=button]{
+    color: #ffffff;
+    background-color:#c30d23;
+    border: none;
+    border-radius: 5px;
+}
+#regbtn{
+    height: 2.75rem;
+    width: 100%;
+    font-weight: 900;
+    font-size: 2rem;
+}
+.ccgred{
+    color: #c30d23;
+}
